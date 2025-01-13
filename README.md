@@ -29,13 +29,18 @@ To run the project locally, follow these steps:
 3. Create and activate a virtual environment:
     ```bash
     python -m venv .venv
-a.For macOS/Linux:
+    ```
+
+    **a. For macOS/Linux:**
     ```bash
-    source venv/bin/activate
-    
-b.For Windows:
+    source .venv/bin/activate
+    ```
+
+    **b. For Windows:**
     ```bash
-    .venv\Scripts\activate     
+    .venv\Scripts\activate
+    ```
+ 
 
 4. Install dependencies:
     ```bash
