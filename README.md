@@ -13,9 +13,7 @@ This project aims to develop an AI-based solution for detecting plant diseases u
 - **Python**: Programming language for implementing machine learning and data processing.
 - **TensorFlow/Keras**: For building and training the deep learning model.
 - **OpenCV**: For image processing and manipulation.
-- **Flask/Django**: (Optional) For building web services or API endpoints.
-- **IoT Devices**: (Optional) Used for gathering environmental data like temperature, humidity, and soil moisture.
-- **Mobile App**: (Optional) A mobile interface to interact with the disease detection system.
+- **Streamlit**:  For building web services.
 
 ## Installation
 To run the project locally, follow these steps:
@@ -51,9 +49,9 @@ To run the project locally, follow these steps:
     
 ## Usage
 - **Input**: Upload images of plant leaves through the web interface.
-- **Output**: The model will predict the disease based on the leaf's appearance and provide actionable recommendations to treat the disease.
+- **Output**: The model will predict the disease based on the leaf's appearance.
 
-The model was trained on a dataset containing labeled images of various plant diseases. You can explore the dataset used in the project here: Link to Dataset.
+The model was trained on a dataset containing labeled images of various plant diseases. You can explore the dataset used in the project here: [Link to Dataset](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset).
 
 ## Future Work
 - **Expand Dataset**: Incorporate more images of plant diseases to improve accuracy and generalization across different plant species.
