@@ -30,13 +30,13 @@ To run the project locally, follow these steps:
     ```bash
     python -m venv .venv
 
-a.**For macOS/Linux**
-    ```bash
-    source venv/bin/activate
+     ** a.**For macOS/Linux****
+            ```bash
+            source venv/bin/activate
     
-b.**For Windows**
-    ```bash
-    .venv\Scripts\activate     
+      **  b.**For Windows****
+            ```bash
+            .venv\Scripts\activate     
     
 4. Install dependencies:
     ```bash
