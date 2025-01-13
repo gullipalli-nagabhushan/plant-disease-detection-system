@@ -39,18 +39,17 @@ To run the project locally, follow these steps:
     streamlit run main.py  #  to launch the server
     
 ## Usage
-**Input**: Upload images of plant leaves through the web or mobile interface.
-**Output**: The model will predict the disease based on the leaf's appearance and provide actionable recommendations to treat the disease.
+- **Input**: Upload images of plant leaves through the web or mobile interface.
+- **Output**: The model will predict the disease based on the leaf's appearance and provide actionable recommendations to treat the disease.
 
 The model was trained on a dataset containing labeled images of various plant diseases. You can explore the dataset used in the project here: Link to Dataset.
 
 ## Future Work
-**Expand Dataset**: Incorporate more images of plant diseases to improve accuracy and generalization across different plant species.
-**Real-time Suggestions**: Upon detection, the system will display suggestions for treatment or management.
-Dataset
-**Real-Time Monitoring**: Implement live camera feeds and IoT sensor data integration for real-time disease detection in field conditions.
-**Mobile App**: Develop a fully functional mobile application to provide instant diagnosis in the field using phone cameras.
-**Advanced AI Models**: Experiment with more advanced deep learning architectures like GANs or Reinforcement Learning for enhanced disease prediction.
+- **Expand Dataset**: Incorporate more images of plant diseases to improve accuracy and generalization across different plant species.
+- **Real-time Suggestions**: Upon detection, the system will display suggestions for treatment or management.
+- **Real-Time Monitoring**: Implement live camera feeds and IoT sensor data integration for real-time disease detection in field conditions.
+- **Mobile App**: Develop a fully functional mobile application to provide instant diagnosis in the field using phone cameras.
+- **Advanced AI Models**: Experiment with more advanced deep learning architectures like GANs or Reinforcement Learning for enhanced disease prediction.
 
 ## Contributing
 We welcome contributions from the community! If you want to contribute, please fork the repository and submit a pull request. Make sure to follow the contribution guidelines.
@@ -59,10 +58,10 @@ We welcome contributions from the community! If you want to contribute, please f
 This project is licensed under the MIT License - see the LICENSE file for more information.
 
 ## Acknowledgments
-TensorFlow for providing powerful machine learning tools.
-OpenCV for offering image processing capabilities.
-Kaggle Plant Disease Dataset for supplying the dataset used to train the model.
-Flask for the web framework.
+- TensorFlow for providing powerful machine learning tools.
+- OpenCV for offering image processing capabilities.
+- Kaggle Plant Disease Dataset for supplying the dataset used to train the model.
+- Streamlit for the web framework.
 
 
 
