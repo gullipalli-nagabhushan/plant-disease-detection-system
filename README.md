@@ -51,7 +51,8 @@ To run the project locally, follow these steps:
 - **Input**: Upload images of plant leaves through the web interface.
 - **Output**: The model will predict the disease based on the leaf's appearance.
 
-The model was trained on a dataset containing labeled images of various plant diseases. You can explore the dataset used in the project here: [Link to Dataset](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset).<a href="https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset">Link</a>
+The model was trained on a dataset containing labeled images of various plant diseases. You can explore the dataset used in the project here:
+<a href="https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset" target=_blank>Link to Dataset.</a>
 
 ## Future Work
 - **Expand Dataset**: Incorporate more images of plant diseases to improve accuracy and generalization across different plant species.
