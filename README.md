@@ -29,15 +29,14 @@ To run the project locally, follow these steps:
 3. Create and activate a virtual environment:
     ```bash
     python -m venv .venv
+**a.For macOS/Linux**
+    ```bash
+    source venv/bin/activate
+    
+**b.For Windows**
+    ```bash
+    .venv\Scripts\activate     
 
-     ** a.**For macOS/Linux****
-            ```bash
-            source venv/bin/activate
-    
-      **  b.**For Windows****
-            ```bash
-            .venv\Scripts\activate     
-    
 4. Install dependencies:
     ```bash
     pip install -r requirements.txt
@@ -46,7 +45,7 @@ To run the project locally, follow these steps:
     streamlit run main.py  #  to launch the server
     
 ## Usage
-- **Input**: Upload images of plant leaves through the web or mobile interface.
+- **Input**: Upload images of plant leaves through the web interface.
 - **Output**: The model will predict the disease based on the leaf's appearance and provide actionable recommendations to treat the disease.
 
 The model was trained on a dataset containing labeled images of various plant diseases. You can explore the dataset used in the project here: Link to Dataset.
