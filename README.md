@@ -20,7 +20,7 @@ To run the project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Codermvgr/plant-disease-detection-system.git
+   git clone https://github.com/gullipalli-nagabhushan/plant-disease-detection-system.git
 2. Navigate to the project folder:
     ```bash
     cd plant-disease-detection
