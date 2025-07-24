@@ -1,3 +1,5 @@
+streamlit
+numpy
+Pillow
 tensorflow==2.15.0
 keras
-streamlit

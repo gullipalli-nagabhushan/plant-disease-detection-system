@@ -1,92 +1,120 @@
 # Plant Disease Detection
 
-## Project Overview
-This project aims to develop an AI-based solution for detecting plant diseases using computer vision and machine learning. It leverages deep learning techniques to identify common plant diseases from images of plant leaves. The goal is to assist farmers and agricultural professionals in early disease detection to improve crop yield and reduce pesticide usage.
+# 🌿 Plant Disease Detection System for Sustainable Agriculture
 
-## Features
-- **Disease Detection**: Detects various plant diseases based on leaf images.
-- **Real-time Analysis**: Provides quick diagnosis using pre-trained models for plant diseases.
-- **Mobile Compatibility**: The system can be used in mobile applications for easy access in field conditions.
-- **Predictive Analytics**: Suggests preventive measures based on detected diseases.
-  
-## Technologies Used
-- **Python**: Programming language for implementing machine learning and data processing.
-- **TensorFlow/Keras**: For building and training the deep learning model.
-- **OpenCV**: For image processing and manipulation.
-- **Streamlit**:  For building web services.
+This project is a Deep Learning-based web application that detects plant diseases from leaf images using a Convolutional Neural Network (CNN) trained in TensorFlow. The application is deployed using Streamlit on Hugging Face Spaces.
 
-## Installation
-To run the project locally, follow these steps:
+---
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/gullipalli-nagabhushan/plant-disease-detection-system.git
-2. Navigate to the project folder:
-    ```bash
-    cd plant-disease-detection
-3. Create and activate a virtual environment:
-    ```bash
-    python -m venv .venv
-    ```
+## 📌 Features
 
-    **a. For macOS/Linux:**
-    ```bash
-    source .venv/bin/activate
-    ```
+- 🌱 Classifies plant leaf images into multiple disease categories
+- 🧠 TensorFlow-based CNN model trained on plant disease dataset
+- 📦 Saved model loaded into a Streamlit app
+- 🐳 Dockerized and deployed on Hugging Face Spaces
+- 🖼️ Accepts uploaded images for real-time prediction
 
-    **b. For Windows:**
-    ```bash
-    .venv\Scripts\activate
-    ```
- 
+---
 
-4. Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-5. Run the application:
-    ```bash
-    streamlit run main.py  #  to launch the server
-    
-## Usage
-- **Input**: Upload images of plant leaves through the web interface.
-- **Output**: The model will predict the disease based on the leaf's appearance.
+## 📂 Dataset
 
-The model was trained on a dataset containing labeled images of various plant diseases. You can explore the dataset used in the project here:
-<a href="https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset" target="_blank">Link to Dataset.</a>
+We used the [New Plant Diseases Dataset](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset) available on Kaggle.
 
-## Future Work
-- **Expand Dataset**: Incorporate more images of plant diseases to improve accuracy and generalization across different plant species.
-- **Real-time Suggestions**: Upon detection, the system will display suggestions for treatment or management.
-- **Real-Time Monitoring**: Implement live camera feeds and IoT sensor data integration for real-time disease detection in field conditions.
-- **Mobile App**: Develop a fully functional mobile application to provide instant diagnosis in the field using phone cameras.
-- **Advanced AI Models**: Experiment with more advanced deep learning architectures like GANs or Reinforcement Learning for enhanced disease prediction.
+📁 Dataset Summary:
+- Over 50,000 labeled images of diseased and healthy plant leaves
+- 38 plant classes including tomato, potato, corn, apple, etc.
 
-## Contributing
-We welcome contributions from the community! If you want to contribute, please fork the repository and submit a pull request. Make sure to follow the contribution guidelines.
+📥 Download:
+```bash
+https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset
+```
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for more information.
+---
 
-## Acknowledgments
-- TensorFlow for providing powerful machine learning tools.
-- OpenCV for offering image processing capabilities.
-- Kaggle Plant Disease Dataset for supplying the dataset used to train the model.
-- Streamlit for the web framework.
+## 🧠 Model Training
 
+The model is trained in this Jupyter Notebook:  
+👉 [`Plant_Disease_Detection_System_for_Sustainable_Agriculture.ipynb`](./Plant_Disease_Detection_System_for_Sustainable_Agriculture.ipynb)
 
+### 🔧 Key Details:
+- Framework: TensorFlow 2.x
+- Model: CNN with Conv2D, MaxPooling2D, Dense layers
+- Optimizer: Adam
+- Loss: Categorical Crossentropy
+- Accuracy: ~99% on training set and ~97% on validation set
+- Saved as: `plant_disease_detection_model.keras`
 
+---
 
-### Highlights of the `README.md` file:
+## 🖥️ Live Web App
 
-1. **Project Description**: An overview of the plant disease detection system and its goals.
-2. **Features**: A list of the key features the system provides.
-3. **Technologies Used**: Describes the technologies, libraries, and frameworks powering the system.
-4. **Installation Guide**: Step-by-step instructions for setting up the project locally.
-5. **Usage**: A brief explanation of how users interact with the system.
-6. **Dataset**: Information about the dataset used for training the model.
-7. **Future Work**: Ideas for how the project can be expanded and improved.
-8. **Contributing**: Encourages external contributions to the project.
-9. **License**: Information about the license governing the project.
-10. **Acknowledgments**: Credits to the libraries and resources used.
+🔗 **Live on Hugging Face Spaces**:  
+📌 `https://huggingface.co/spaces/nagabhushan-gullipalli/plant-disease-detection`
 
-This version is formatted for clarity, and you can adapt it to your specific project details as needed.
+---
+
+## 🚀 Run the App Locally
+
+```bash
+git clone https://github.com/gullipalli-nagabhushan/plant-disease-detection.git
+cd plant-disease-detection
+
+# (Optional) Create virtual environment
+python -m venv venv
+source venv/bin/activate   # or venv\Scripts\activate on Windows
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run Streamlit
+streamlit run app.py
+```
+
+---
+
+## 🐳 Docker Deployment (used for Hugging Face)
+
+```dockerfile
+FROM python:3.10-slim
+WORKDIR /code
+COPY requirements.txt ./
+RUN pip install --upgrade pip && \
+    pip install -r requirements.txt && \
+    pip install tensorflow==2.15.0
+COPY . .
+CMD ["streamlit", "run", "app.py", "--server.port=7860", "--server.address=0.0.0.0"]
+```
+
+---
+
+## 📁 Project Structure
+
+```
+├── app.py                            # Streamlit web app
+├── plant_disease_model.h5           # Trained model
+├── requirements.txt
+├── Dockerfile
+├── README.md
+└── Plant_Disease_Detection_System_for_Sustainable_Agriculture.ipynb
+```
+
+---
+
+## ✨ Future Improvements
+
+- Add Grad-CAM visualizations for explainability
+- Improve mobile responsiveness
+- Use ONNX for cross-platform deployment
+- Add disease-specific treatment suggestions
+
+---
+
+## 📧 Contact
+
+Created by [Gullipalli Nagabhushan](mailto:gullipallinagabhushan@gmail.com)
+
+---
+
+## 📜 License
+
+MIT License – feel free to use, share, and improve.
